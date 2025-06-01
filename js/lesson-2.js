@@ -216,18 +216,18 @@
 //     this.b = b;
 //   },
 //   exist() {
-//     return this.a === undefined || this.b === undefined;
+//     return this.a !== undefined && this.b !== undefined;
 //   },
 //   sum() {
 //     if (this.exist()) {
-//       return "No such propeties";
-//     } return this.a + this.b;
+// return this.a + this.b;
+//     } return "No such propeties";
     
 //   },
 //   mult() {
 //     if (this.exist()) {
-//       return "No such propeties";
-//     } return this.a * this.b;
+// return this.a * this.b;
+//     } return "No such propeties";
 //   }
 // }
 
@@ -248,25 +248,25 @@
 // Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою 
 // назвою фрукта, це також треба урахувати.
 
-const fruits = [
-    { name: "Яблуко", price: 45, quantity: 7 },
-    { name: "Апельсин", price: 60, quantity: 4 },
-    { name: "Банан", price: 125, quantity: 8 },
-    { name: "Груша", price: 350, quantity: 2 },
-    { name: "Виноград", price: 440, quantity: 3 },
-    { name: "Банан", price: 125, quantity: 3 },
-  ];
+// const fruits = [
+//     { name: "Яблуко", price: 45, quantity: 7 },
+//     { name: "Апельсин", price: 60, quantity: 4 },
+//     { name: "Банан", price: 125, quantity: 8 },
+//     { name: "Груша", price: 350, quantity: 2 },
+//     { name: "Виноград", price: 440, quantity: 3 },
+//     { name: "Банан", price: 125, quantity: 3 },
+//   ];
 
-  function calcTotalPrice(fruits, fruitName) {
-    let sum = 0;
-    for (let i of fruits) {
-      if (i.name === fruitName) {
-        sum += i.price * i.quantity;
-      }
-    }
-    return sum;
-  }
+  // function calcTotalPrice(fruits, fruitName) {
+  //   let sum = 0;
+  //   for (let i of fruits) {
+  //     if (i.name === fruitName) {
+  //       sum += i.price * i.quantity;
+  //     }
+  //   }
+  //   return sum;
+  // }
 
-  console.log(calcTotalPrice(fruits, "Банан"));
+  // console.log(calcTotalPrice(fruits, "Банан"));
   
 ///////////////////////////////////////////////////////////////////////////////////
