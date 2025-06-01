@@ -164,8 +164,11 @@
 //   user.hobby = 'skydiving';
 //   user.premium = false;
 
+//   let objKey = Object.keys(user);
   
-//   console.log(user);
+//   for (let i of objKey) {
+//     console.log(`${i}:${user[i]}`);
+//   }
   
 
 
@@ -184,6 +187,17 @@
 //     Ajax: 1470,
 //   };
 
+//   let sum = 0;
+//   let arrSalaries = Object.values(salaries);
+//   for (let i of arrSalaries) {
+//     sum += i;
+//   }
+
+//   console.log(sum);
+  
+
+
+
 ////////////////////////////////////////////////////////////////////////////
 
 // Завдання 9:////////////////////////////////////////////////////////////
@@ -195,6 +209,32 @@
 
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
+
+// const calculator = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   exist() {
+//     return this.a === undefined || this.b === undefined;
+//   },
+//   sum() {
+//     if (this.exist()) {
+//       return "No such propeties";
+//     } return this.a + this.b;
+    
+//   },
+//   mult() {
+//     if (this.exist()) {
+//       return "No such propeties";
+//     } return this.a * this.b;
+//   }
+// }
+
+// calculator.read(2, 2);
+
+// console.log(calculator.sum());
+
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -208,12 +248,25 @@
 // Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою 
 // назвою фрукта, це також треба урахувати.
 
-// const fruits = [
-//     { name: "Яблуко", price: 45, quantity: 7 },
-//     { name: "Апельсин", price: 60, quantity: 4 },
-//     { name: "Банан", price: 125, quantity: 8 },
-//     { name: "Груша", price: 350, quantity: 2 },
-//     { name: "Виноград", price: 440, quantity: 3 },
-//     { name: "Банан", price: 125, quantity: 3 },
-//   ];
+const fruits = [
+    { name: "Яблуко", price: 45, quantity: 7 },
+    { name: "Апельсин", price: 60, quantity: 4 },
+    { name: "Банан", price: 125, quantity: 8 },
+    { name: "Груша", price: 350, quantity: 2 },
+    { name: "Виноград", price: 440, quantity: 3 },
+    { name: "Банан", price: 125, quantity: 3 },
+  ];
+
+  function calcTotalPrice(fruits, fruitName) {
+    let sum = 0;
+    for (let i of fruits) {
+      if (i.name === fruitName) {
+        sum += i.price * i.quantity;
+      }
+    }
+    return sum;
+  }
+
+  console.log(calcTotalPrice(fruits, "Банан"));
+  
 ///////////////////////////////////////////////////////////////////////////////////
